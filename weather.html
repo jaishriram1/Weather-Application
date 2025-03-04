@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-gif" href="./e7befff154e80ea8de54b116b750af98.gif" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="www.css" />
+  <title>Weather Web</title>
+</head>
+
+<body>
+    <div class="butt1">
+        <button onclick="showInterface()" class="bbb">Let's Start</button>
+    </div>
+    <div class="interface">
+        <h1>Weather Web</h1>
+    <div class="container">
+        <p class="tab" data-userWeather>Your Weather</p>
+        <p class="tab" data-searchWeather>Search Weather</p>
+    </div>
+  
+    <div class="weather-container">
+    
+    <div class="sub-container grant-location-container">
+      <img src="pngtree-access-granted-icon-vector-round-green-vector-png-image_18378822.png" width="110" height="110" loading="lazy" class="iim1"/>
+      <img src="pngtree-access-denied-icon-problem-icon-round-vector-picture-image_9658859.png" width="110" height="110" loading="lazy" class="iim2"/>
+      <p>Location Access Required</p>
+      <p data-messageText>Please, Allow Access To know About Weather</p>
+      <button class="btn" data-grantAccess>Give Access</button>
+    </div>
+    
+    <form class="form-container" data-searchForm>
+      <input placeholder="Search for city ..." data-searchInp id="inp"/>
+      <button class="btn" type="submit">
+        <img src="free-search-icon-2911-thumb.png" width="25" height="25" loading="lazy" />
+      </button>
+    </form>
+    
+    <div class="sub-container loading-container">
+      <img src="03-19-26-213_512.gif" width="150" height="150" />
+      <p>Loading</p>
+    </div>
+    
+    <div class="sub-container user-info-container">
+      <div class="name">
+        <p data-cityName></p>
+        <img crossorigin="anonymous" data-countryIcon />
+      </div>
+      <div class="temprature">
+        <p data-weatherDesc></p>
+        <img data-weatherIcon />
+        <p data-temp></p>
+      </div>
+      <div class="parameter-container">
+        <div class="parameter">
+          <img src="hurricane-windy.gif" />
+          <p class="parameter-title">windspeed</p>
+          <p class="parameter-value" data-windspeed></p>
+        </div>
+        <div class="parameter">
+          <img src="slow-motion.gif" />
+          <p class="parameter-title">humidity</p>
+          <p class="parameter-value" data-humidity></p>
+        </div>
+        <div class="parameter">
+          <img src="ggggp.gif" />
+          <p class="parameter-title">clouds</p>
+          <p class="parameter-value" data-cloudiness></p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="sub-container api-error-container">
+      <img src="404-error-page-3959253.png" data-notFoundImg />
+      <p data-apiErrorText></p>
+      <button class="btn" data-apiErrorBtn>Retry</button>
+    </div>
+    </div>
+    </div>
+  <script src="wthr.js"></script>
+</body>
+
+</html>
